@@ -5,14 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Olaryn — Learning compounds.</title>
-<meta name="description" content="Olaryn is a holding company. Learning compounds: what we learn, improve, and create should strengthen everything around it.">
+<meta name="description" content="Learning compounds. What we learn, improve, and create should strengthen everything around it.">
 <link rel="canonical" href="https://olaryn.com/">
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta name="theme-color" content="#F5EFE3">
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Olaryn">
 <meta property="og:title" content="Olaryn — Learning compounds.">
@@ -22,7 +21,6 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Olaryn — Learning compounds.">
 <meta name="twitter:description" content="What we learn, improve, and create should strengthen everything around it.">
@@ -48,210 +46,157 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,440;9..144,500&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink: #211E1B;
-    --paper: #F5EFE3;
-    --brass: #AD7D4C;
-    --mist: #E1D8C5;
-    --muted: #7A7367;
+    --ink:#211E1B;
+    --paper:#F5EFE3;
+    --brass:#AD7D4C;
+    --muted:#7A7367;
   }
 
-  *{ box-sizing: border-box; }
-  html, body{ margin: 0; padding: 0; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; min-height:100%; }
   body{
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Work Sans', -apple-system, sans-serif;
+    min-height:100svh;
+    display:flex;
+    flex-direction:column;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans',-apple-system,sans-serif;
+  }
+
+  main{
+    flex:1 1 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:56px 24px 40px;
+    text-align:center;
   }
 
   .hero{
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: clamp(36px, 6vh, 64px) 24px clamp(24px, 4vh, 44px);
-    text-align: center;
+    width:min(620px,100%);
   }
 
   .mark{
-    width: 46px;
-    height: 46px;
-    margin-bottom: 28px;
+    width:46px;
+    height:46px;
+    margin-bottom:26px;
   }
   .mark path{
-    fill: none;
-    stroke: var(--ink);
-    stroke-width: 10;
-    stroke-linecap: round;
+    fill:none;
+    stroke:var(--ink);
+    stroke-width:10;
+    stroke-linecap:round;
   }
-  .mark circle{ fill: var(--brass); }
+  .mark circle{ fill:var(--brass); }
 
   h1{
-    font-family: 'Fraunces', serif;
-    font-weight: 440;
-    font-size: clamp(38px, 6vw, 58px);
-    margin: 0 0 20px;
-    letter-spacing: 0.005em;
+    font-family:'Fraunces',serif;
+    font-weight:440;
+    font-size:clamp(38px,6vw,58px);
+    letter-spacing:.005em;
+    margin:0 0 18px;
   }
 
   .thesis{
-    font-family: 'Fraunces', serif;
-    font-weight: 440;
-    font-size: clamp(24px, 4vw, 34px);
-    line-height: 1.25;
-    margin: 0 0 18px;
+    font-family:'Fraunces',serif;
+    font-weight:440;
+    font-size:clamp(25px,4vw,34px);
+    line-height:1.25;
+    margin:0 0 18px;
   }
 
   .lede{
-    font-size: 16px;
-    color: var(--muted);
-    max-width: 46ch;
-    line-height: 1.65;
-    margin: 0 auto;
-  }
-
-  section.products{
-    width: min(980px, 100%);
-    margin: 0 auto;
-    padding: 0 24px clamp(24px, 4vh, 40px);
-  }
-
-  .products-head{
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .products-head h2{
-    font-family: 'Fraunces', serif;
-    font-weight: 440;
-    font-size: 26px;
-    margin: 0;
-  }
-
-  .product-list{
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 14px;
-  }
-
-  .product-row{
-    min-height: 168px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    padding: 22px;
-    border: 1px solid var(--mist);
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.12);
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-  }
-
-  .product-top{
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 16px;
-  }
-
-  .product-row .name{
-    font-family: 'Fraunces', serif;
-    font-weight: 440;
-    font-size: 25px;
-    color: var(--ink);
-  }
-
-  .product-row .arrow{
-    color: var(--brass);
-    font-size: 18px;
-    line-height: 1;
-    transition: transform 0.18s ease;
-  }
-
-  .product-row .category{
-    margin-top: 12px;
-    font-size: 14px;
-    line-height: 1.45;
-    color: var(--muted);
-  }
-
-  .product-row .domain{
-    margin-top: auto;
-    padding-top: 24px;
-    font-size: 12.5px;
-    color: var(--muted);
-  }
-
-  .product-row:hover{
-    transform: translateY(-2px);
-    border-color: var(--brass);
-    background: rgba(255, 255, 255, 0.24);
-  }
-
-  .product-row:hover .arrow{ transform: translate(2px, -2px); }
-
-  @media (max-width: 720px){
-    .product-list{ grid-template-columns: 1fr; }
-    .product-row{ min-height: 132px; }
-  }
-  .product-row:hover .name{ color: var(--brass); text-decoration: underline; text-underline-offset: 4px; }
-
-  @media (max-width: 560px){
-    .product-row{ flex-direction: column; align-items: flex-start; gap: 6px; }
-    .product-row .blurb{
- text-align: left; }
+    max-width:46ch;
+    margin:0 auto;
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.65;
   }
 
   footer{
-    margin-top: auto;
-    text-align: center;
-    padding: 0 24px clamp(24px, 4vh, 40px);
-    font-size: 12.5px;
-    color: var(--muted);
-    letter-spacing: 0.01em;
+    flex:0 0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:16px;
+    padding:0 24px 28px;
+    color:var(--muted);
+    font-size:12.5px;
+  }
+
+  .company-links{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+  }
+
+  .company-link{
+    width:34px;
+    height:34px;
+    display:grid;
+    place-items:center;
+    border-radius:9px;
+    opacity:.72;
+    transition:opacity .15s ease, transform .15s ease;
+  }
+
+  .company-link:hover{
+    opacity:1;
+    transform:translateY(-1px);
+  }
+
+  .company-link:focus-visible{
+    outline:1px solid var(--brass);
+    outline-offset:4px;
+  }
+
+  .company-link img{
+    display:block;
+    max-width:24px;
+    max-height:24px;
+    width:auto;
+    height:auto;
+  }
+
+  .company-link.trevra img{
+    width:22px;
+    height:22px;
+  }
+
+  @media (max-width:560px){
+    main{ padding:44px 22px 32px; }
+    footer{ padding-bottom:22px; }
   }
 </style>
 </head>
 <body>
+  <main>
+    <section class="hero" aria-labelledby="olaryn-title">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M 82 50 A 32 32 0 1 1 71.5 26.5" />
+        <circle cx="71.5" cy="26.5" r="5" />
+      </svg>
 
-  <div class="hero">
-    <svg class="mark" viewBox="0 0 100 100">
-      <path d="M 82 50 A 32 32 0 1 1 71.5 26.5" />
-      <circle cx="71.5" cy="26.5" r="5" />
-    </svg>
+      <h1 id="olaryn-title">Olaryn</h1>
+      <p class="thesis">Learning compounds.</p>
+      <p class="lede">What we learn, improve, and create should strengthen everything around it.</p>
+    </section>
+  </main>
 
-    <h1>Olaryn</h1>
-    <p class="thesis">Learning compounds.</p>
-    <p class="lede">What we learn, improve, and create should strengthen everything around it.</p>
-  </div>
-
-  <section class="products">
-    <div class="products-head">
-      <h2>Companies</h2>
-    </div>
-    <div class="product-list">
-      <a class="product-row" href="https://beseam.com" target="_blank" rel="noopener" title="Visit beseam">
-        <span class="product-top"><span class="name">beseam</span><span class="arrow">↗</span></span>
-        <span class="category">Commerce intelligence</span>
-        <span class="domain">beseam.com</span>
+  <footer>
+    <nav class="company-links" aria-label="Olaryn companies">
+      <a class="company-link" href="https://beseam.com" target="_blank" rel="noopener" aria-label="beseam">
+        <img src="/assets/companies/beseam.svg" alt="">
       </a>
-      <a class="product-row" href="https://lemoncrow.com" target="_blank" rel="noopener" title="Visit lemoncrow">
-        <span class="product-top"><span class="name">lemoncrow</span><span class="arrow">↗</span></span>
-        <span class="category">Agent infrastructure</span>
-        <span class="domain">lemoncrow.com</span>
+      <a class="company-link" href="https://lemoncrow.com" target="_blank" rel="noopener" aria-label="lemoncrow">
+        <img src="/assets/companies/lemoncrow.svg" alt="">
       </a>
-      <a class="product-row" href="https://usetrevra.com" target="_blank" rel="noopener" title="Visit usetrevra">
-        <span class="product-top"><span class="name">usetrevra</span><span class="arrow">↗</span></span>
-        <span class="category">Go-to-market automation</span>
-        <span class="domain">usetrevra.com</span>
+      <a class="company-link trevra" href="https://usetrevra.com" target="_blank" rel="noopener" aria-label="usetrevra">
+        <img src="/assets/companies/trevra.svg" alt="">
       </a>
-    </div>
-
-  <footer>&copy; 2026 Olaryn · Zürich, Switzerland 🇨🇭</footer>
-
+    </nav>
+    <div>&copy; 2026 Olaryn · Zürich, Switzerland 🇨🇭</div>
+  </footer>
 </body>
 </html>

@@ -114,7 +114,7 @@
   }
 
   section.products{
-    max-width: 760px;
+    width: min(980px, 100%);
     margin: 0 auto;
     padding: 0 24px clamp(24px, 4vh, 40px);
   }
@@ -128,54 +128,76 @@
     font-family: 'Fraunces', serif;
     font-weight: 440;
     font-size: 26px;
-    margin: 0 0 10px;
-  }
-
-  .products-head p{
-    color: var(--muted);
-    font-size: 15px;
     margin: 0;
-    max-width: 44ch;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.55;
   }
 
   .product-list{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
   }
 
   .product-row{
+    min-height: 168px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 22px;
+    border: 1px solid var(--mist);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.12);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+  }
+
+  .product-top{
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    gap: 24px;
-    padding: 18px 4px;
-    border-top: 1px solid var(--mist);
-    text-decoration: none;
-    color: inherit;
-  }
-  .product-row:last-child{
-    border-bottom: 1px solid var(--mist);
+    gap: 16px;
   }
 
   .product-row .name{
     font-family: 'Fraunces', serif;
     font-weight: 440;
-    font-size: 22px;
+    font-size: 25px;
     color: var(--ink);
-    flex-shrink: 0;
-    transition: color 0.15s ease;
   }
 
-  .product-row .blurb{
-    font-size: 14.5px;
+  .product-row .arrow{
+    color: var(--brass);
+    font-size: 18px;
+    line-height: 1;
+    transition: transform 0.18s ease;
+  }
+
+  .product-row .category{
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.45;
     color: var(--muted);
-    text-align: right;
-    line-height: 1.5;
   }
 
+  .product-row .domain{
+    margin-top: auto;
+    padding-top: 24px;
+    font-size: 12.5px;
+    color: var(--muted);
+  }
+
+  .product-row:hover{
+    transform: translateY(-2px);
+    border-color: var(--brass);
+    background: rgba(255, 255, 255, 0.24);
+  }
+
+  .product-row:hover .arrow{ transform: translate(2px, -2px); }
+
+  @media (max-width: 720px){
+    .product-list{ grid-template-columns: 1fr; }
+    .product-row{ min-height: 132px; }
+  }
   .product-row:hover .name{ color: var(--brass); text-decoration: underline; text-underline-offset: 4px; }
 
   @media (max-width: 560px){
@@ -211,22 +233,23 @@
     <div class="products-head">
       <h2>Companies</h2>
     </div>
-
     <div class="product-list">
       <a class="product-row" href="https://beseam.com" target="_blank" rel="noopener" title="Visit beseam">
-        <span class="name">beseam</span>
-        <span class="blurb">beseam.com</span>
+        <span class="product-top"><span class="name">beseam</span><span class="arrow">↗</span></span>
+        <span class="category">Commerce intelligence</span>
+        <span class="domain">beseam.com</span>
       </a>
       <a class="product-row" href="https://lemoncrow.com" target="_blank" rel="noopener" title="Visit lemoncrow">
-        <span class="name">lemoncrow</span>
-        <span class="blurb">lemoncrow.com</span>
+        <span class="product-top"><span class="name">lemoncrow</span><span class="arrow">↗</span></span>
+        <span class="category">Agent infrastructure</span>
+        <span class="domain">lemoncrow.com</span>
       </a>
       <a class="product-row" href="https://usetrevra.com" target="_blank" rel="noopener" title="Visit usetrevra">
-        <span class="name">usetrevra</span>
-        <span class="blurb">usetrevra.com</span>
+        <span class="product-top"><span class="name">usetrevra</span><span class="arrow">↗</span></span>
+        <span class="category">Go-to-market automation</span>
+        <span class="domain">usetrevra.com</span>
       </a>
     </div>
-  </section>
 
   <footer>&copy; 2026 Olaryn · Zürich, Switzerland 🇨🇭</footer>
 

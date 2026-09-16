@@ -58,17 +58,21 @@
   *{ box-sizing: border-box; }
   html, body{ margin: 0; padding: 0; }
   body{
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
     background: var(--paper);
     color: var(--ink);
     font-family: 'Work Sans', -apple-system, sans-serif;
   }
 
   .hero{
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: clamp(32px, 5vh, 52px) 24px clamp(24px, 3.5vh, 38px);
+    padding: clamp(36px, 6vh, 64px) 24px clamp(24px, 4vh, 44px);
     text-align: center;
   }
 
@@ -181,6 +185,7 @@
   }
 
   footer{
+    margin-top: auto;
     text-align: center;
     padding: 0 24px clamp(24px, 4vh, 40px);
     font-size: 12.5px;

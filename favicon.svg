@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501 493" role="img" aria-labelledby="olaryn-favicon-title">
   <title id="olaryn-favicon-title">Olaryn</title>
   <g transform="translate(0 493) scale(.1 -.1)" shape-rendering="geometricPrecision">
-    <g fill="#FFFFFF" stroke="#211E1B" stroke-width="120" stroke-linejoin="round" paint-order="stroke fill">
+    <g fill="#FFFFFF" stroke="#211E1B" stroke-width="200" stroke-linejoin="round" paint-order="stroke fill">
       <path d="M2271 4926c3-3 41-11 84-17 492-68 1026-525 1345-1149 252-495 378-1106 341-1659-7-95-10-175-9-177 5-5 123 252 198 431 133 317 224 625 256 868 20 150 15 423-10 536-48 218-109 345-220 454-362 358-855 604-1384 688-123 19-615 40-601 25z"/>
       <path d="M912 2822c-281-599-397-1009-395-1397 0-194 21-317 77-466 54-144 111-232 201-313 395-354 902-574 1457-635 116-13 546-15 533-2-6 4-46 13-90 19-358 48-795 349-1093 752-293 395-478 791-576 1231-53 242-61 324-61 632 0 158 0 287-1 287-1 0-24-49-52-108z"/>
     </g>

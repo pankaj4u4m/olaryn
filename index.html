@@ -16,8 +16,9 @@
 <link rel="manifest" href="/site.webmanifest?v=7">
 <meta name="application-name" content="Olaryn">
 <meta name="apple-mobile-web-app-title" content="Olaryn">
-<meta name="theme-color" content="#F5EFE3">
-<meta name="color-scheme" content="light">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F5EFE3">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181511">
+<meta name="color-scheme" content="light dark">
 <meta name="robots" content="index, follow, max-image-preview:large">
 
 <meta property="og:type" content="website">
@@ -44,7 +45,7 @@
   "@type": "Organization",
   "name": "Olaryn",
   "url": "https://olaryn.com/",
-  "logo": "https://olaryn.com/logo-mark.svg?v=7",
+  "logo": "https://olaryn.com/logo-mark.svg?v=8",
   "sameAs": [
     "https://beseam.com",
     "https://lemoncrow.com",
@@ -58,10 +59,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,340;9..144,440;9..144,500&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
+    color-scheme:light dark;
     --ink:#211E1B;
     --paper:#F5EFE3;
     --brass:#AD7D4C;
-    --muted:#7A7367;
+    --muted:#70695E;
+  }
+
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ink:#EDE5D6;
+      --paper:#181511;
+      --brass:#C49A63;
+      --muted:#9C9280;
+    }
+
   }
 
   *{ box-sizing:border-box; }
@@ -182,7 +194,7 @@
 <body>
   <main>
     <section class="hero" aria-labelledby="olaryn-title">
-      <img class="mark" src="/logo-mark.svg?v=7" width="501" height="493" alt="">
+      <img class="mark" src="/logo-mark.svg?v=8" width="501" height="493" alt="">
 
       <h1 id="olaryn-title">Olaryn</h1>
       <p class="thesis">Learning compounds.</p>
@@ -192,14 +204,14 @@
 
   <footer>
     <nav class="company-links" aria-label="Olaryn companies">
-      <a class="company-link" href="https://beseam.com" target="_blank" rel="noopener" aria-label="beseam">
-        <img src="/assets/companies/beseam.svg" alt="">
+      <a class="company-link beseam" href="https://beseam.com" target="_blank" rel="noopener" aria-label="beseam">
+        <img src="/assets/companies/beseam.svg?v=3" alt="">
       </a>
       <a class="company-link" href="https://lemoncrow.com" target="_blank" rel="noopener" aria-label="lemoncrow">
         <img src="/assets/companies/lemoncrow.svg" alt="">
       </a>
       <a class="company-link trevra" href="https://usetrevra.com" target="_blank" rel="noopener" aria-label="usetrevra">
-        <img src="/assets/companies/trevra.svg" alt="">
+        <img src="/assets/companies/trevra.svg?v=2" alt="">
       </a>
     </nav>
     <div>&copy; 2026 Olaryn · Zürich, Switzerland 🇨🇭</div>

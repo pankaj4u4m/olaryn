@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Olaryn">
-  <path d="M82 50A32 32 0 1 1 71.5 26.5" fill="none" stroke="#211E1B" stroke-width="11" stroke-linecap="round"/>
-  <circle cx="71.5" cy="26.5" r="6" fill="#AD7D4C"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 501 493" role="img" aria-labelledby="olaryn-mark-title">
+  <title id="olaryn-mark-title">Olaryn</title>
+  <image href="logo-mark.png" width="501" height="493"/>
 </svg>
